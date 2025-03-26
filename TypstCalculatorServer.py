@@ -1,7 +1,3 @@
-import itertools
-from typing import Iterable
-import sympy
-import math
 import re
 import os
 from TypstCalculator import TypstCalculator

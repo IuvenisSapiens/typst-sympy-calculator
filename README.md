@@ -1,87 +1,85 @@
-![Logo](https://picgo-1258602555.cos.ap-nanjing.myqcloud.com/icon.png)
+![Logo](icon.png)
 
-# [Typst Sympy Calculator](https://github.com/OrangeX4/typst-sympy-calculator)
+# [Typst Sympy Calculator](https://github.com/IuvenisSapiens/typst-sympy-calculator)
 
 ## About
 
-`Typst Sympy Calculator` parses **Typst Math Expressions** and converts it into the equivalent **SymPy form**. Then, **calculate it** and convert to typst math text. 
+`Typst Sympy Calculator` parses **Typst Math Expressions** and converts it into the equivalent **SymPy form**. Then, **calculate it** and convert to typst math text.
 
-It is designed for providing **people writing in typst** a ability to calculate something when writing math expression. It is based on `Sympy` module in `Python`.
+It is designed for providing **people writing in typst** a ability to calculate something when writing math expression. It is based on `Sympy` module in `Python` .
 
-The `typst-sympy-calculator` python package is a backend for a VS Code extension [`Typst Sympy Calculator`](https://github.com/OrangeX4/vscode-typst-sympy-calculator), and you also can use it just for parse typst math expression to sympy form in order to do things for yourself.
-
+The `typst-sympy-calculator` python package is a backend for a VS Code extension [`Typst Sympy Calculator`](https://github.com/IuvenisSapiens/vscode-typst-sympy-calculator), and you also can use it just for parse typst math expression to sympy form in order to do things for yourself.
 
 ## Features
 
-![Demo](https://picgo-1258602555.cos.ap-nanjing.myqcloud.com/typst-sympy-calculator.gif)
+![Demo](typst-sympy-calculator.gif)
 
 - **Default Math:**
-    - [x] **Arithmetic:** Add (`+`), Sub (`-`), Dot Mul (`dot`), Cross Mul (`times`), Frac (`/`), Power (`^`), Abs (`|x|`), Sqrt (`sqrt`), etc...
-    - [x] **Alphabet:** `a - z`, `A - Z`, `alpha - omega`, Subscript (`x_1`), Accent Bar(`hat(x)`), etc...
-    - [x] **Common Functions:** `gcd`, `lcm`, `floor`, `ceil`, `max`, `min`, `log`, `ln`, `exp`, `sin`, `cos`, `tan`, `csc`, `sec`, `cot`, `arcsin`, `sinh`, `arsinh`, etc...
-    - [x] **Funcion Symbol:** `f(x)`, `f(x-1,)`, `g(x,y)`, etc...
-    - [x] **Calculous:** Limit `lim_(x -> oo) 1/x`, Integration `integral_1^2 x dif x`, etc...
-    - [x] **Calculous:** Derivation (`dif/(dif x) (x^2 + 1)` is not supported, but you can use `derivative(expr, var)` instead), etc...
-    - [x] **Reduce:** Sum `sum_(k=1)^oo (1/2)^k`, Product `product_(k=1)^oo (1/2)^k`, etc...
-    - [x] **Eval At:** Evalat `x^2 bar_(x = 2)`, `x^2 "|"_(x = 2)`, etc...
-    - [x] **Linear Algebra:** Matrix to raw echelon form `rref`, Determinant `det`, Transpose `^T`, Inverse `^(-1)`, etc...
-    - [x] **Relations:** `==`, `>`, `>=`, `<`, `<=`, etc...
-    - [x] **Solve Equation:** Single Equation `x + 1 = 2`, Multiple Equations `cases(x + y = 1, x - y = 2)`, etc...
-    - [ ] **Logical:** `and`, `or`, `not`, etc...
-    - [ ] **Set Theory:** `in`, `sect`, `union`, `subset`, etc...
-    - [x] **Other:** Binomial `binom(n, k)` ...
+  - [x] **Arithmetic:** Add (`+`), Sub (`-`), Dot Mul (`dot`), Cross Mul (`times`), Frac (`/`), Power (`^`), Abs (`|x|`), Sqrt (`sqrt`), etc...
+  - [x] **Alphabet:** `a - z`, `A - Z`, `alpha - omega`, Subscript (`x_1`), Accent Bar(`hat(x)`), etc...
+  - [x] **Common Functions:** `gcd`, `lcm`, `floor`, `ceil`, `max`, `min`, `log`, `ln`, `exp`, `sin`, `cos`, `tan`, `csc`, `sec`, `cot`, `arcsin`, `sinh`, `arsinh`, etc...
+  - [x] **Funcion Symbol:** `f(x)`, `f(x-1,)`, `g(x,y)`, etc...
+  - [x] **Calculous:** Limit `lim_(x -> oo) 1/x`, Integration `integral_1^2 x dif x`, etc...
+  - [x] **Calculous:** Derivation (`dif/(dif x) (x^2 + 1)` is not supported, but you can use `derivative(expr, var)` instead), etc...
+  - [x] **Reduce:** Sum `sum_(k=1)^oo (1/2)^k`, Product `product_(k=1)^oo (1/2)^k`, etc...
+  - [x] **Eval At:** Evalat `x^2 bar_(x = 2)`, `x^2 "|"_(x = 2)`, etc...
+  - [x] **Linear Algebra:** Matrix to raw echelon form `rref`, Determinant `det`, Transpose `^T`, Inverse `^(-1)`, etc...
+  - [x] **Relations:** `==`, `>`, `>=`, `<`, `<=`, etc...
+  - [x] **Solve Equation:** Single Equation `x + 1 = 2`, Multiple Equations `cases(x + y = 1, x - y = 2)`, etc...
+  - [ ] **Logical:** `and`, `or`, `not`, etc...
+  - [ ] **Set Theory:** `in`, `sect`, `union`, `subset`, etc...
+  - [x] **Other:** Binomial `binom(n, k)` ...
 - **Custom Math (in typst file):**
-    - [x] **Define Accents:** `#let acc(x) = math.accent(x, math.grave)`
-    - [x] **Define Operators:** `#let add = math.op("add")`
-    - [x] **Define Symbols:** `#let xy = math.italic("xy")` or `#let mail = symbol("🖂", ("stamped", "🖃"),)`
-    - [x] **Define Functions:**
-        ```py
+  - [x] **Define Accents:** `#let acc(x) = math.accent(x, math.grave)`
+  - [x] **Define Operators:** `#let add = math.op("add")`
+  - [x] **Define Symbols:** `#let xy = math.italic("xy")` or `#let mail = symbol("🖂", ("stamped", "🖃"),)`
+  - [x] **Define Functions:**
+
+````py
         # typst-calculator
         @func()
         def convert_add(a, b):
             return a + b
         ```
-- **Typst Math Printer:**
+
+* **Typst Math Printer:**
     - [x] Complete `TypstMathPrinter` in `TypstConverter.py`
     - [ ] Custom Printer for `TypstCalculator.py` and `TypstCalculatorServer.py`
-- **VS Code Extension:**
+* **VS Code Extension:**
     - [x] Develop a VS Code Extension for `Typst Calculator`
-
 
 ## Install
 
 ```bash
 pip install typst-sympy-calculator
-```
-
+````
 
 ## Usage
 
-### Difference Between `parse`, `converter`, `calculator`, `server`
+### Difference Between `parse` , `converter` , `calculator` , `server`
 
 - `TypstParser.py`: parse typst math expression to ANTLR abstract syntax tree with `TypstGrammar.g4`;
 - `TypstConverter.py`:
-    - convert typst math expression to sympy expression via `TypstMathConverter`;
-    - convert sympy expression to typst math expression via `TypstMathPrinter`;
-    - has `decorators` for defining custom functions, operators;
-    - has `define_accent`, `define_symbol_base` and `define_function` for defining custom accents, symbols and functions;
+  - convert typst math expression to sympy expression via `TypstMathConverter`;
+  - convert sympy expression to typst math expression via `TypstMathPrinter`;
+  - has `decorators` for defining custom functions, operators;
+  - has `define_accent`, `define_symbol_base` and `define_function` for defining custom accents, symbols and functions;
 - `TypstCalculator.py`:
-    - calculate sympy expression and convert to typst math expression;
-    - has `subs`, `simplify`, `evalf` methods;
-    - has `set_variance` and `unset_variance` for calculating with variance;
+  - calculate sympy expression and convert to typst math expression;
+  - has `subs`, `simplify`, `evalf` methods;
+  - has `set_variance` and `unset_variance` for calculating with variance;
 - `DefaultTypstCalculator`: define many useful functions, operators, accents, symbols;
-    - Accents, Alphabet, Greeks, Arithmetic, Common Functions, Calculous, Linear Algebra, etc...
+  - Accents, Alphabet, Greeks, Arithmetic, Common Functions, Calculous, Linear Algebra, etc...
 - `TypstCalculatorServer`:
-    - has `init` method for initializing `TypstCalculator` with a typst file;
-    - **can define your custom functions on your typst file**;
-    - has `simplify`, `subs`, `evalf` methods for calculating with typst file;
+  - has `init` method for initializing `TypstCalculator` with a typst file;
+  - **can define your custom functions on your typst file**;
+  - has `simplify`, `subs`, `evalf` methods for calculating with typst file;
 
-It is a top-down design, so you can use `TypstCalculatorServer` directly, or use `TypstCalculator` with `TypstConverter`.
+It is a top-down design, so you can use `TypstCalculatorServer` directly, or use `TypstCalculator` with `TypstConverter` .
 
-**RECOMMEND: see the usage of decorators like `@func()` in [DefaultTypstCalculator.py](https://github.com/OrangeX4/typst-sympy-calculator/blob/main/DefaultTypstCalculator.py).**
+**RECOMMEND: see the usage of decorators like `@func()` in [DefaultTypstCalculator.py](https://github.com/IuvenisSapiens/typst-sympy-calculator/blob/main/DefaultTypstCalculator.py).**
 
 For the usage, you can see the unit test part `if __name__ == '__main__':` in each files.
-
 
 ### Sympy Expressions and Typst Math Text
 
@@ -112,10 +110,9 @@ expr = converter.sympy(typst_math)
 print(converter.typst(expr))
 ```
 
-
 ### Typst Calculator Server
 
-The simplest way to use it is just like `TypstCalculatorServer.py`:
+The simplest way to use it is just like `TypstCalculatorServer.py` :
 
 ```python
 from TypstCalculatorServer import TypstCalculatorServer
@@ -175,10 +172,9 @@ and `tests/cal.typ` just like:
 #let mail = symbol("🖂", ("stamped", "🖃"),)
 ```
 
-
 ### Default Typst Calculator
 
-If you have not a typst file, you can use `DefaultTypstCalculator.py`, it define many useful functions and symbols just like:
+If you have not a typst file, you can use `DefaultTypstCalculator.py` , it define many useful functions and symbols just like:
 
 ```python
 # Symbols
@@ -240,7 +236,7 @@ $ x = 1 $
 
 PS: You can use grammar like `y == x + 1` to describe the relation of equality.
 
-If you want to see the bonding of variances, you can press `Shift + Ctrl + P`, and input `typst-sympy-calculator: Show Current variances`, then you will get data like:
+If you want to see the bonding of variances, you can press `Shift + Ctrl + P` , and input `typst-sympy-calculator: Show Current variances` , then you will get data like:
 
 ```typst
 y = x + 1
@@ -309,7 +305,7 @@ Or just use `'''typst-sympy-calculator` or `'''python \n # typst-calculator` to 
 there are some decorators you can use:
 
 - `@operator(type='ADDITIVE_OP', convert_ast=convert_ast, name=name, ast=False)`: Define a common operator;
-- `@func()`: Define a function, receive args list; 
+- `@func()`: Define a function, receive args list;
 - `@func_mat()`: Define a matrix function, receive single arg `matrix`;
 - `@constant()`: Define a constant, receive no args but only return a constant value;
 - `@relation_op()`: Define a relation operator, receive args `a` and `b`;
@@ -318,9 +314,9 @@ there are some decorators you can use:
 - `@postfix_op()`: Define a postfix operator, receive args `a`;
 - `@reduce_op()`: Define a reduce operator, receive args `expr` and `args = (symbol, sub, sup)`;
 
-It is important that the function name MUST be `def convert_{operator_name}`, or you can use decorator arg `@func(name='operator_name')`, and the substring `_dot_` will be replaced by `.`.
+It is important that the function name MUST be `def convert_{operator_name}` , or you can use decorator arg `@func(name='operator_name')` , and the substring `_dot_` will be replaced by `.` .
 
-There are some examples (from [DefaultTypstCalculator.py](https://github.com/OrangeX4/typst-sympy-calculator/blob/main/DefaultTypstCalculator.py)):
+There are some examples (from [DefaultTypstCalculator.py](https://github.com/IuvenisSapiens/typst-sympy-calculator/blob/main/DefaultTypstCalculator.py)):
 
 ```python
 # Functions
@@ -365,24 +361,22 @@ def convert_sum(expr, args):
     return sympy.Sum(expr, args)
 ```
 
-
 ## Contributing
 
-1. Clone it by `git clone https://github.com/OrangeX4/typst-calculator.git`
+1. Clone it by `git clone https://github.com/IuvenisSapiens/typst-sympy-calculator.git`
 2. Install dependencies by `pip install -r requirements.txt`
 3. Compile ANTLR grammar by `python ./scripts/compile.py`
 4. Debug or add your code with `TypstCalculatorServer.py` or `TypstCalculator.py`, etc...
 
 It is welcome to create an issue or pull request.
 
-
 ## Thanks
 
 - [augustt198 / latex2sympy](https://github.com/augustt198/latex2sympy)
 - [purdue-tlt / latex2sympy](https://github.com/purdue-tlt/latex2sympy)
+- [OrangeX4 / vscode-typst-sympy-calculator](https://github.com/OrangeX4/vscode-typst-sympy-calculator)
 - [ANTLR](https://www.antlr.org/)
 - [Sympy](https://www.sympy.org/en/index.html)
-
 
 ## License
 

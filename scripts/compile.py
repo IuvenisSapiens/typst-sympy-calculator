@@ -7,4 +7,4 @@ if __name__ == '__main__':
     # Change to that path and run the file
     if rel_path != '':
         os.chdir(rel_path)
-    os.system('java -jar antlr-4.7.2-complete.jar TypstGrammar.g4 -o gen')
+    os.system('java -jar antlr-4.13.2-complete.jar TypstGrammar.g4 -o gen')

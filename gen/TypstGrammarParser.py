@@ -1,163 +1,132 @@
-# Generated from TypstGrammar.g4 by ANTLR 4.7.2
+# Generated from TypstGrammar.g4 by ANTLR 4.13.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
-from typing.io import TextIO
 import sys
-
+if sys.version_info[1] > 5:
+	from typing import TextIO
+else:
+	from typing.io import TextIO
 
 def serializedATN():
-    with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3)")
-        buf.write("\u014f\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
-        buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
-        buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
-        buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31")
-        buf.write("\t\31\4\32\t\32\4\33\t\33\4\34\t\34\4\35\t\35\4\36\t\36")
-        buf.write("\4\37\t\37\4 \t \4!\t!\4\"\t\"\4#\t#\3\2\3\2\3\2\3\2\3")
-        buf.write("\3\3\3\3\3\3\3\3\3\3\3\7\3Q\n\3\f\3\16\3T\13\3\3\4\3\4")
-        buf.write("\3\5\3\5\3\5\3\5\3\5\3\5\7\5^\n\5\f\5\16\5a\13\5\3\6\3")
-        buf.write("\6\3\6\3\6\3\6\3\6\7\6i\n\6\f\6\16\6l\13\6\3\7\3\7\3\7")
-        buf.write("\6\7q\n\7\r\7\16\7r\5\7u\n\7\3\b\3\b\3\b\3\b\3\b\3\b\5")
-        buf.write("\b}\n\b\3\t\3\t\3\t\3\t\3\t\3\t\5\t\u0085\n\t\3\n\3\n")
-        buf.write("\3\n\3\n\3\n\3\n\5\n\u008d\n\n\3\13\3\13\3\13\3\13\3\13")
-        buf.write("\3\13\5\13\u0095\n\13\3\f\3\f\3\f\3\f\3\f\5\f\u009c\n")
-        buf.write("\f\3\f\3\f\5\f\u00a0\n\f\3\r\3\r\3\r\3\r\3\r\5\r\u00a7")
-        buf.write("\n\r\3\r\3\r\5\r\u00ab\n\r\3\16\3\16\3\16\3\16\3\16\3")
-        buf.write("\16\3\16\3\16\5\16\u00b5\n\16\3\17\3\17\3\17\3\20\3\20")
-        buf.write("\3\21\3\21\3\21\5\21\u00bf\n\21\3\22\3\22\7\22\u00c3\n")
-        buf.write("\22\f\22\16\22\u00c6\13\22\3\23\3\23\5\23\u00ca\n\23\3")
-        buf.write("\24\3\24\3\24\3\24\3\24\3\24\3\24\3\24\3\24\5\24\u00d5")
-        buf.write("\n\24\3\25\3\25\3\25\3\25\3\25\3\25\3\25\3\25\3\25\3\25")
-        buf.write("\3\25\3\25\5\25\u00e3\n\25\3\26\3\26\3\26\3\26\3\27\3")
-        buf.write("\27\3\27\7\27\u00ec\n\27\f\27\16\27\u00ef\13\27\3\27\3")
-        buf.write("\27\5\27\u00f3\n\27\3\30\3\30\3\30\7\30\u00f8\n\30\f\30")
-        buf.write("\16\30\u00fb\13\30\3\30\3\30\5\30\u00ff\n\30\3\31\3\31")
-        buf.write("\5\31\u0103\n\31\3\31\5\31\u0106\n\31\3\31\3\31\3\31\3")
-        buf.write("\31\3\31\5\31\u010d\n\31\3\32\3\32\3\32\3\32\3\32\3\33")
-        buf.write("\3\33\3\33\3\33\3\34\3\34\3\34\3\34\3\34\3\34\3\34\3\34")
-        buf.write("\3\34\3\35\3\35\5\35\u0123\n\35\3\35\3\35\3\35\3\35\3")
-        buf.write("\35\5\35\u012a\n\35\3\36\3\36\5\36\u012e\n\36\3\36\3\36")
-        buf.write("\3\36\3\36\3\37\3\37\7\37\u0136\n\37\f\37\16\37\u0139")
-        buf.write("\13\37\3\37\3\37\3 \3 \3 \3 \3 \3!\3!\3!\5!\u0145\n!\3")
-        buf.write("\"\3\"\5\"\u0149\n\"\3#\3#\5#\u014d\n#\3#\3\u0137\5\4")
-        buf.write("\b\n$\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.")
-        buf.write("\60\62\64\668:<>@BD\2\3\3\2\3\6\2\u0159\2F\3\2\2\2\4J")
-        buf.write("\3\2\2\2\6U\3\2\2\2\bW\3\2\2\2\nb\3\2\2\2\ft\3\2\2\2\16")
-        buf.write("v\3\2\2\2\20~\3\2\2\2\22\u0086\3\2\2\2\24\u0094\3\2\2")
-        buf.write("\2\26\u0096\3\2\2\2\30\u00a1\3\2\2\2\32\u00b4\3\2\2\2")
-        buf.write("\34\u00b6\3\2\2\2\36\u00b9\3\2\2\2 \u00be\3\2\2\2\"\u00c0")
-        buf.write("\3\2\2\2$\u00c7\3\2\2\2&\u00d4\3\2\2\2(\u00e2\3\2\2\2")
-        buf.write("*\u00e4\3\2\2\2,\u00ed\3\2\2\2.\u00f9\3\2\2\2\60\u0100")
-        buf.write("\3\2\2\2\62\u010e\3\2\2\2\64\u0113\3\2\2\2\66\u0117\3")
-        buf.write("\2\2\28\u0120\3\2\2\2:\u012b\3\2\2\2<\u0133\3\2\2\2>\u013c")
-        buf.write("\3\2\2\2@\u0144\3\2\2\2B\u0146\3\2\2\2D\u014c\3\2\2\2")
-        buf.write("FG\7\7\2\2GH\5\4\3\2HI\7\b\2\2I\3\3\2\2\2JK\b\3\1\2KL")
-        buf.write("\5\6\4\2LR\3\2\2\2MN\f\4\2\2NO\7\32\2\2OQ\5\4\3\5PM\3")
-        buf.write("\2\2\2QT\3\2\2\2RP\3\2\2\2RS\3\2\2\2S\5\3\2\2\2TR\3\2")
-        buf.write("\2\2UV\5\b\5\2V\7\3\2\2\2WX\b\5\1\2XY\5\n\6\2Y_\3\2\2")
-        buf.write("\2Z[\f\4\2\2[\\\7\33\2\2\\^\5\b\5\5]Z\3\2\2\2^a\3\2\2")
-        buf.write("\2_]\3\2\2\2_`\3\2\2\2`\t\3\2\2\2a_\3\2\2\2bc\b\6\1\2")
-        buf.write("cd\5\f\7\2dj\3\2\2\2ef\f\4\2\2fg\7\34\2\2gi\5\n\6\5he")
-        buf.write("\3\2\2\2il\3\2\2\2jh\3\2\2\2jk\3\2\2\2k\13\3\2\2\2lj\3")
-        buf.write("\2\2\2mn\7\33\2\2nu\5\f\7\2oq\5\"\22\2po\3\2\2\2qr\3\2")
-        buf.write("\2\2rp\3\2\2\2rs\3\2\2\2su\3\2\2\2tm\3\2\2\2tp\3\2\2\2")
-        buf.write("u\r\3\2\2\2v|\7\24\2\2w}\5D#\2xy\7\13\2\2yz\5,\27\2z{")
-        buf.write("\7\f\2\2{}\3\2\2\2|w\3\2\2\2|x\3\2\2\2}\17\3\2\2\2~\u0084")
-        buf.write("\7\24\2\2\177\u0085\5D#\2\u0080\u0081\7\13\2\2\u0081\u0082")
-        buf.write("\5\6\4\2\u0082\u0083\7\f\2\2\u0083\u0085\3\2\2\2\u0084")
-        buf.write("\177\3\2\2\2\u0084\u0080\3\2\2\2\u0085\21\3\2\2\2\u0086")
-        buf.write("\u008c\7\25\2\2\u0087\u008d\5$\23\2\u0088\u0089\7\13\2")
-        buf.write("\2\u0089\u008a\5\6\4\2\u008a\u008b\7\f\2\2\u008b\u008d")
-        buf.write("\3\2\2\2\u008c\u0087\3\2\2\2\u008c\u0088\3\2\2\2\u008d")
-        buf.write("\23\3\2\2\2\u008e\u008f\5\20\t\2\u008f\u0090\5\22\n\2")
-        buf.write("\u0090\u0095\3\2\2\2\u0091\u0092\5\22\n\2\u0092\u0093")
-        buf.write("\5\20\t\2\u0093\u0095\3\2\2\2\u0094\u008e\3\2\2\2\u0094")
-        buf.write("\u0091\3\2\2\2\u0095\25\3\2\2\2\u0096\u009f\7\24\2\2\u0097")
-        buf.write("\u00a0\5D#\2\u0098\u009b\7\13\2\2\u0099\u009c\5\6\4\2")
-        buf.write("\u009a\u009c\5\4\3\2\u009b\u0099\3\2\2\2\u009b\u009a\3")
-        buf.write("\2\2\2\u009c\u009d\3\2\2\2\u009d\u009e\7\f\2\2\u009e\u00a0")
-        buf.write("\3\2\2\2\u009f\u0097\3\2\2\2\u009f\u0098\3\2\2\2\u00a0")
-        buf.write("\27\3\2\2\2\u00a1\u00aa\7\25\2\2\u00a2\u00ab\5$\23\2\u00a3")
-        buf.write("\u00a6\7\13\2\2\u00a4\u00a7\5\6\4\2\u00a5\u00a7\5\4\3")
-        buf.write("\2\u00a6\u00a4\3\2\2\2\u00a6\u00a5\3\2\2\2\u00a7\u00a8")
-        buf.write("\3\2\2\2\u00a8\u00a9\7\f\2\2\u00a9\u00ab\3\2\2\2\u00aa")
-        buf.write("\u00a2\3\2\2\2\u00aa\u00a3\3\2\2\2\u00ab\31\3\2\2\2\u00ac")
-        buf.write("\u00b5\5\26\f\2\u00ad\u00b5\5\30\r\2\u00ae\u00af\5\26")
-        buf.write("\f\2\u00af\u00b0\5\22\n\2\u00b0\u00b5\3\2\2\2\u00b1\u00b2")
-        buf.write("\5\22\n\2\u00b2\u00b3\5\26\f\2\u00b3\u00b5\3\2\2\2\u00b4")
-        buf.write("\u00ac\3\2\2\2\u00b4\u00ad\3\2\2\2\u00b4\u00ae\3\2\2\2")
-        buf.write("\u00b4\u00b1\3\2\2\2\u00b5\33\3\2\2\2\u00b6\u00b7\7\22")
-        buf.write("\2\2\u00b7\u00b8\5\32\16\2\u00b8\35\3\2\2\2\u00b9\u00ba")
-        buf.write("\t\2\2\2\u00ba\37\3\2\2\2\u00bb\u00bf\7\35\2\2\u00bc\u00bf")
-        buf.write("\5\36\20\2\u00bd\u00bf\5\34\17\2\u00be\u00bb\3\2\2\2\u00be")
-        buf.write("\u00bc\3\2\2\2\u00be\u00bd\3\2\2\2\u00bf!\3\2\2\2\u00c0")
-        buf.write("\u00c4\5$\23\2\u00c1\u00c3\5 \21\2\u00c2\u00c1\3\2\2\2")
-        buf.write("\u00c3\u00c6\3\2\2\2\u00c4\u00c2\3\2\2\2\u00c4\u00c5\3")
-        buf.write("\2\2\2\u00c5#\3\2\2\2\u00c6\u00c4\3\2\2\2\u00c7\u00c9")
-        buf.write("\5&\24\2\u00c8\u00ca\5\22\n\2\u00c9\u00c8\3\2\2\2\u00c9")
-        buf.write("\u00ca\3\2\2\2\u00ca%\3\2\2\2\u00cb\u00d5\5(\25\2\u00cc")
-        buf.write("\u00d5\5*\26\2\u00cd\u00d5\5\60\31\2\u00ce\u00d5\5\62")
-        buf.write("\32\2\u00cf\u00d5\5\64\33\2\u00d0\u00d5\5\66\34\2\u00d1")
-        buf.write("\u00d5\58\35\2\u00d2\u00d5\5:\36\2\u00d3\u00d5\5D#\2\u00d4")
-        buf.write("\u00cb\3\2\2\2\u00d4\u00cc\3\2\2\2\u00d4\u00cd\3\2\2\2")
-        buf.write("\u00d4\u00ce\3\2\2\2\u00d4\u00cf\3\2\2\2\u00d4\u00d0\3")
-        buf.write("\2\2\2\u00d4\u00d1\3\2\2\2\u00d4\u00d2\3\2\2\2\u00d4\u00d3")
-        buf.write("\3\2\2\2\u00d5\'\3\2\2\2\u00d6\u00d7\7\13\2\2\u00d7\u00d8")
-        buf.write("\5\6\4\2\u00d8\u00d9\7\f\2\2\u00d9\u00e3\3\2\2\2\u00da")
-        buf.write("\u00db\7\r\2\2\u00db\u00dc\5\6\4\2\u00dc\u00dd\7\16\2")
-        buf.write("\2\u00dd\u00e3\3\2\2\2\u00de\u00df\7\17\2\2\u00df\u00e0")
-        buf.write("\5\6\4\2\u00e0\u00e1\7\20\2\2\u00e1\u00e3\3\2\2\2\u00e2")
-        buf.write("\u00d6\3\2\2\2\u00e2\u00da\3\2\2\2\u00e2\u00de\3\2\2\2")
-        buf.write("\u00e3)\3\2\2\2\u00e4\u00e5\7\21\2\2\u00e5\u00e6\5\6\4")
-        buf.write("\2\u00e6\u00e7\7\21\2\2\u00e7+\3\2\2\2\u00e8\u00e9\5\4")
-        buf.write("\3\2\u00e9\u00ea\7\27\2\2\u00ea\u00ec\3\2\2\2\u00eb\u00e8")
-        buf.write("\3\2\2\2\u00ec\u00ef\3\2\2\2\u00ed\u00eb\3\2\2\2\u00ed")
-        buf.write("\u00ee\3\2\2\2\u00ee\u00f0\3\2\2\2\u00ef\u00ed\3\2\2\2")
-        buf.write("\u00f0\u00f2\5\4\3\2\u00f1\u00f3\7\27\2\2\u00f2\u00f1")
-        buf.write("\3\2\2\2\u00f2\u00f3\3\2\2\2\u00f3-\3\2\2\2\u00f4\u00f5")
-        buf.write("\5,\27\2\u00f5\u00f6\7\26\2\2\u00f6\u00f8\3\2\2\2\u00f7")
-        buf.write("\u00f4\3\2\2\2\u00f8\u00fb\3\2\2\2\u00f9\u00f7\3\2\2\2")
-        buf.write("\u00f9\u00fa\3\2\2\2\u00fa\u00fc\3\2\2\2\u00fb\u00f9\3")
-        buf.write("\2\2\2\u00fc\u00fe\5,\27\2\u00fd\u00ff\7\26\2\2\u00fe")
-        buf.write("\u00fd\3\2\2\2\u00fe\u00ff\3\2\2\2\u00ff/\3\2\2\2\u0100")
-        buf.write("\u0102\7 \2\2\u0101\u0103\5\16\b\2\u0102\u0101\3\2\2\2")
-        buf.write("\u0102\u0103\3\2\2\2\u0103\u0105\3\2\2\2\u0104\u0106\5")
-        buf.write("\22\n\2\u0105\u0104\3\2\2\2\u0105\u0106\3\2\2\2\u0106")
-        buf.write("\u010c\3\2\2\2\u0107\u0108\7\13\2\2\u0108\u0109\5,\27")
-        buf.write("\2\u0109\u010a\7\f\2\2\u010a\u010d\3\2\2\2\u010b\u010d")
-        buf.write("\5\n\6\2\u010c\u0107\3\2\2\2\u010c\u010b\3\2\2\2\u010d")
-        buf.write("\61\3\2\2\2\u010e\u010f\7!\2\2\u010f\u0110\7\13\2\2\u0110")
-        buf.write("\u0111\5.\30\2\u0111\u0112\7\f\2\2\u0112\63\3\2\2\2\u0113")
-        buf.write("\u0114\7\37\2\2\u0114\u0115\5\32\16\2\u0115\u0116\5\n")
-        buf.write("\6\2\u0116\65\3\2\2\2\u0117\u0118\7\"\2\2\u0118\u0119")
-        buf.write("\7\24\2\2\u0119\u011a\7\13\2\2\u011a\u011b\5B\"\2\u011b")
-        buf.write("\u011c\7\31\2\2\u011c\u011d\5\6\4\2\u011d\u011e\7\f\2")
-        buf.write("\2\u011e\u011f\5\b\5\2\u011f\67\3\2\2\2\u0120\u0122\7")
-        buf.write("#\2\2\u0121\u0123\5\20\t\2\u0122\u0121\3\2\2\2\u0122\u0123")
-        buf.write("\3\2\2\2\u0123\u0129\3\2\2\2\u0124\u0125\7\13\2\2\u0125")
-        buf.write("\u0126\5\6\4\2\u0126\u0127\7\f\2\2\u0127\u012a\3\2\2\2")
-        buf.write("\u0128\u012a\5\n\6\2\u0129\u0124\3\2\2\2\u0129\u0128\3")
-        buf.write("\2\2\2\u012a9\3\2\2\2\u012b\u012d\7$\2\2\u012c\u012e\5")
-        buf.write("\24\13\2\u012d\u012c\3\2\2\2\u012d\u012e\3\2\2\2\u012e")
-        buf.write("\u012f\3\2\2\2\u012f\u0130\5\b\5\2\u0130\u0131\7%\2\2")
-        buf.write("\u0131\u0132\5B\"\2\u0132;\3\2\2\2\u0133\u0137\7\23\2")
-        buf.write("\2\u0134\u0136\13\2\2\2\u0135\u0134\3\2\2\2\u0136\u0139")
-        buf.write("\3\2\2\2\u0137\u0138\3\2\2\2\u0137\u0135\3\2\2\2\u0138")
-        buf.write("\u013a\3\2\2\2\u0139\u0137\3\2\2\2\u013a\u013b\7\23\2")
-        buf.write("\2\u013b=\3\2\2\2\u013c\u013d\7\36\2\2\u013d\u013e\7\13")
-        buf.write("\2\2\u013e\u013f\5\6\4\2\u013f\u0140\7\f\2\2\u0140?\3")
-        buf.write("\2\2\2\u0141\u0145\7\'\2\2\u0142\u0145\5<\37\2\u0143\u0145")
-        buf.write("\5> \2\u0144\u0141\3\2\2\2\u0144\u0142\3\2\2\2\u0144\u0143")
-        buf.write("\3\2\2\2\u0145A\3\2\2\2\u0146\u0148\5@!\2\u0147\u0149")
-        buf.write("\5\16\b\2\u0148\u0147\3\2\2\2\u0148\u0149\3\2\2\2\u0149")
-        buf.write("C\3\2\2\2\u014a\u014d\7(\2\2\u014b\u014d\5B\"\2\u014c")
-        buf.write("\u014a\3\2\2\2\u014c\u014b\3\2\2\2\u014dE\3\2\2\2#R_j")
-        buf.write("rt|\u0084\u008c\u0094\u009b\u009f\u00a6\u00aa\u00b4\u00be")
-        buf.write("\u00c4\u00c9\u00d4\u00e2\u00ed\u00f2\u00f9\u00fe\u0102")
-        buf.write("\u0105\u010c\u0122\u0129\u012d\u0137\u0144\u0148\u014c")
-        return buf.getvalue()
-
+    return [
+        4,1,39,333,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
+        2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
+        7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,
+        2,27,7,27,2,28,7,28,2,29,7,29,2,30,7,30,2,31,7,31,2,32,7,32,2,33,
+        7,33,1,0,1,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,5,1,79,8,1,10,1,12,
+        1,82,9,1,1,2,1,2,1,3,1,3,1,3,1,3,1,3,1,3,5,3,92,8,3,10,3,12,3,95,
+        9,3,1,4,1,4,1,4,1,4,1,4,1,4,5,4,103,8,4,10,4,12,4,106,9,4,1,5,1,
+        5,1,5,4,5,111,8,5,11,5,12,5,112,3,5,115,8,5,1,6,1,6,1,6,1,6,1,6,
+        1,6,3,6,123,8,6,1,7,1,7,1,7,1,7,1,7,1,7,3,7,131,8,7,1,8,1,8,1,8,
+        1,8,1,8,1,8,3,8,139,8,8,1,9,1,9,1,9,1,9,1,9,1,9,3,9,147,8,9,1,10,
+        1,10,1,10,1,10,1,10,3,10,154,8,10,1,10,1,10,3,10,158,8,10,1,11,1,
+        11,1,11,1,11,1,11,3,11,165,8,11,1,11,1,11,3,11,169,8,11,1,12,1,12,
+        1,12,1,12,1,12,1,12,1,12,1,12,3,12,179,8,12,1,13,1,13,1,13,1,14,
+        1,14,1,15,1,15,1,15,3,15,189,8,15,1,16,1,16,5,16,193,8,16,10,16,
+        12,16,196,9,16,1,17,1,17,3,17,200,8,17,1,18,1,18,1,18,1,18,1,18,
+        1,18,1,18,1,18,1,18,3,18,211,8,18,1,19,1,19,1,19,1,19,1,19,1,19,
+        1,19,1,19,1,19,1,19,1,19,1,19,3,19,225,8,19,1,20,1,20,1,20,1,20,
+        1,21,1,21,1,21,5,21,234,8,21,10,21,12,21,237,9,21,1,21,1,21,3,21,
+        241,8,21,1,22,1,22,1,22,5,22,246,8,22,10,22,12,22,249,9,22,1,22,
+        1,22,3,22,253,8,22,1,23,1,23,3,23,257,8,23,1,23,3,23,260,8,23,1,
+        23,1,23,1,23,1,23,1,23,3,23,267,8,23,1,24,1,24,1,24,1,24,1,24,1,
+        25,1,25,1,25,1,25,1,26,1,26,1,26,1,26,1,26,1,26,1,26,1,26,1,26,1,
+        27,1,27,3,27,289,8,27,1,27,1,27,1,27,1,27,1,27,3,27,296,8,27,1,28,
+        1,28,3,28,300,8,28,1,28,1,28,1,28,1,28,1,29,1,29,5,29,308,8,29,10,
+        29,12,29,311,9,29,1,29,1,29,1,30,1,30,1,30,1,30,1,30,1,31,1,31,1,
+        31,3,31,323,8,31,1,32,1,32,3,32,327,8,32,1,33,1,33,3,33,331,8,33,
+        1,33,1,309,3,2,6,8,34,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,
+        32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,0,1,1,0,1,
+        4,343,0,68,1,0,0,0,2,72,1,0,0,0,4,83,1,0,0,0,6,85,1,0,0,0,8,96,1,
+        0,0,0,10,114,1,0,0,0,12,116,1,0,0,0,14,124,1,0,0,0,16,132,1,0,0,
+        0,18,146,1,0,0,0,20,148,1,0,0,0,22,159,1,0,0,0,24,178,1,0,0,0,26,
+        180,1,0,0,0,28,183,1,0,0,0,30,188,1,0,0,0,32,190,1,0,0,0,34,197,
+        1,0,0,0,36,210,1,0,0,0,38,224,1,0,0,0,40,226,1,0,0,0,42,235,1,0,
+        0,0,44,247,1,0,0,0,46,254,1,0,0,0,48,268,1,0,0,0,50,273,1,0,0,0,
+        52,277,1,0,0,0,54,286,1,0,0,0,56,297,1,0,0,0,58,305,1,0,0,0,60,314,
+        1,0,0,0,62,322,1,0,0,0,64,324,1,0,0,0,66,330,1,0,0,0,68,69,5,5,0,
+        0,69,70,3,2,1,0,70,71,5,6,0,0,71,1,1,0,0,0,72,73,6,1,-1,0,73,74,
+        3,4,2,0,74,80,1,0,0,0,75,76,10,2,0,0,76,77,5,24,0,0,77,79,3,2,1,
+        3,78,75,1,0,0,0,79,82,1,0,0,0,80,78,1,0,0,0,80,81,1,0,0,0,81,3,1,
+        0,0,0,82,80,1,0,0,0,83,84,3,6,3,0,84,5,1,0,0,0,85,86,6,3,-1,0,86,
+        87,3,8,4,0,87,93,1,0,0,0,88,89,10,2,0,0,89,90,5,25,0,0,90,92,3,6,
+        3,3,91,88,1,0,0,0,92,95,1,0,0,0,93,91,1,0,0,0,93,94,1,0,0,0,94,7,
+        1,0,0,0,95,93,1,0,0,0,96,97,6,4,-1,0,97,98,3,10,5,0,98,104,1,0,0,
+        0,99,100,10,2,0,0,100,101,5,26,0,0,101,103,3,8,4,3,102,99,1,0,0,
+        0,103,106,1,0,0,0,104,102,1,0,0,0,104,105,1,0,0,0,105,9,1,0,0,0,
+        106,104,1,0,0,0,107,108,5,25,0,0,108,115,3,10,5,0,109,111,3,32,16,
+        0,110,109,1,0,0,0,111,112,1,0,0,0,112,110,1,0,0,0,112,113,1,0,0,
+        0,113,115,1,0,0,0,114,107,1,0,0,0,114,110,1,0,0,0,115,11,1,0,0,0,
+        116,122,5,18,0,0,117,123,3,66,33,0,118,119,5,9,0,0,119,120,3,42,
+        21,0,120,121,5,10,0,0,121,123,1,0,0,0,122,117,1,0,0,0,122,118,1,
+        0,0,0,123,13,1,0,0,0,124,130,5,18,0,0,125,131,3,66,33,0,126,127,
+        5,9,0,0,127,128,3,4,2,0,128,129,5,10,0,0,129,131,1,0,0,0,130,125,
+        1,0,0,0,130,126,1,0,0,0,131,15,1,0,0,0,132,138,5,19,0,0,133,139,
+        3,34,17,0,134,135,5,9,0,0,135,136,3,4,2,0,136,137,5,10,0,0,137,139,
+        1,0,0,0,138,133,1,0,0,0,138,134,1,0,0,0,139,17,1,0,0,0,140,141,3,
+        14,7,0,141,142,3,16,8,0,142,147,1,0,0,0,143,144,3,16,8,0,144,145,
+        3,14,7,0,145,147,1,0,0,0,146,140,1,0,0,0,146,143,1,0,0,0,147,19,
+        1,0,0,0,148,157,5,18,0,0,149,158,3,66,33,0,150,153,5,9,0,0,151,154,
+        3,4,2,0,152,154,3,2,1,0,153,151,1,0,0,0,153,152,1,0,0,0,154,155,
+        1,0,0,0,155,156,5,10,0,0,156,158,1,0,0,0,157,149,1,0,0,0,157,150,
+        1,0,0,0,158,21,1,0,0,0,159,168,5,19,0,0,160,169,3,34,17,0,161,164,
+        5,9,0,0,162,165,3,4,2,0,163,165,3,2,1,0,164,162,1,0,0,0,164,163,
+        1,0,0,0,165,166,1,0,0,0,166,167,5,10,0,0,167,169,1,0,0,0,168,160,
+        1,0,0,0,168,161,1,0,0,0,169,23,1,0,0,0,170,179,3,20,10,0,171,179,
+        3,22,11,0,172,173,3,20,10,0,173,174,3,16,8,0,174,179,1,0,0,0,175,
+        176,3,16,8,0,176,177,3,20,10,0,177,179,1,0,0,0,178,170,1,0,0,0,178,
+        171,1,0,0,0,178,172,1,0,0,0,178,175,1,0,0,0,179,25,1,0,0,0,180,181,
+        5,16,0,0,181,182,3,24,12,0,182,27,1,0,0,0,183,184,7,0,0,0,184,29,
+        1,0,0,0,185,189,5,27,0,0,186,189,3,28,14,0,187,189,3,26,13,0,188,
+        185,1,0,0,0,188,186,1,0,0,0,188,187,1,0,0,0,189,31,1,0,0,0,190,194,
+        3,34,17,0,191,193,3,30,15,0,192,191,1,0,0,0,193,196,1,0,0,0,194,
+        192,1,0,0,0,194,195,1,0,0,0,195,33,1,0,0,0,196,194,1,0,0,0,197,199,
+        3,36,18,0,198,200,3,16,8,0,199,198,1,0,0,0,199,200,1,0,0,0,200,35,
+        1,0,0,0,201,211,3,38,19,0,202,211,3,40,20,0,203,211,3,46,23,0,204,
+        211,3,48,24,0,205,211,3,50,25,0,206,211,3,52,26,0,207,211,3,54,27,
+        0,208,211,3,56,28,0,209,211,3,66,33,0,210,201,1,0,0,0,210,202,1,
+        0,0,0,210,203,1,0,0,0,210,204,1,0,0,0,210,205,1,0,0,0,210,206,1,
+        0,0,0,210,207,1,0,0,0,210,208,1,0,0,0,210,209,1,0,0,0,211,37,1,0,
+        0,0,212,213,5,9,0,0,213,214,3,4,2,0,214,215,5,10,0,0,215,225,1,0,
+        0,0,216,217,5,11,0,0,217,218,3,4,2,0,218,219,5,12,0,0,219,225,1,
+        0,0,0,220,221,5,13,0,0,221,222,3,4,2,0,222,223,5,14,0,0,223,225,
+        1,0,0,0,224,212,1,0,0,0,224,216,1,0,0,0,224,220,1,0,0,0,225,39,1,
+        0,0,0,226,227,5,15,0,0,227,228,3,4,2,0,228,229,5,15,0,0,229,41,1,
+        0,0,0,230,231,3,2,1,0,231,232,5,21,0,0,232,234,1,0,0,0,233,230,1,
+        0,0,0,234,237,1,0,0,0,235,233,1,0,0,0,235,236,1,0,0,0,236,238,1,
+        0,0,0,237,235,1,0,0,0,238,240,3,2,1,0,239,241,5,21,0,0,240,239,1,
+        0,0,0,240,241,1,0,0,0,241,43,1,0,0,0,242,243,3,42,21,0,243,244,5,
+        20,0,0,244,246,1,0,0,0,245,242,1,0,0,0,246,249,1,0,0,0,247,245,1,
+        0,0,0,247,248,1,0,0,0,248,250,1,0,0,0,249,247,1,0,0,0,250,252,3,
+        42,21,0,251,253,5,20,0,0,252,251,1,0,0,0,252,253,1,0,0,0,253,45,
+        1,0,0,0,254,256,5,30,0,0,255,257,3,12,6,0,256,255,1,0,0,0,256,257,
+        1,0,0,0,257,259,1,0,0,0,258,260,3,16,8,0,259,258,1,0,0,0,259,260,
+        1,0,0,0,260,266,1,0,0,0,261,262,5,9,0,0,262,263,3,42,21,0,263,264,
+        5,10,0,0,264,267,1,0,0,0,265,267,3,8,4,0,266,261,1,0,0,0,266,265,
+        1,0,0,0,267,47,1,0,0,0,268,269,5,31,0,0,269,270,5,9,0,0,270,271,
+        3,44,22,0,271,272,5,10,0,0,272,49,1,0,0,0,273,274,5,29,0,0,274,275,
+        3,24,12,0,275,276,3,8,4,0,276,51,1,0,0,0,277,278,5,32,0,0,278,279,
+        5,18,0,0,279,280,5,9,0,0,280,281,3,64,32,0,281,282,5,23,0,0,282,
+        283,3,4,2,0,283,284,5,10,0,0,284,285,3,6,3,0,285,53,1,0,0,0,286,
+        288,5,33,0,0,287,289,3,14,7,0,288,287,1,0,0,0,288,289,1,0,0,0,289,
+        295,1,0,0,0,290,291,5,9,0,0,291,292,3,4,2,0,292,293,5,10,0,0,293,
+        296,1,0,0,0,294,296,3,8,4,0,295,290,1,0,0,0,295,294,1,0,0,0,296,
+        55,1,0,0,0,297,299,5,34,0,0,298,300,3,18,9,0,299,298,1,0,0,0,299,
+        300,1,0,0,0,300,301,1,0,0,0,301,302,3,6,3,0,302,303,5,35,0,0,303,
+        304,3,64,32,0,304,57,1,0,0,0,305,309,5,17,0,0,306,308,9,0,0,0,307,
+        306,1,0,0,0,308,311,1,0,0,0,309,310,1,0,0,0,309,307,1,0,0,0,310,
+        312,1,0,0,0,311,309,1,0,0,0,312,313,5,17,0,0,313,59,1,0,0,0,314,
+        315,5,28,0,0,315,316,5,9,0,0,316,317,3,4,2,0,317,318,5,10,0,0,318,
+        61,1,0,0,0,319,323,5,37,0,0,320,323,3,58,29,0,321,323,3,60,30,0,
+        322,319,1,0,0,0,322,320,1,0,0,0,322,321,1,0,0,0,323,63,1,0,0,0,324,
+        326,3,62,31,0,325,327,3,12,6,0,326,325,1,0,0,0,326,327,1,0,0,0,327,
+        65,1,0,0,0,328,331,5,38,0,0,329,331,3,64,32,0,330,328,1,0,0,0,330,
+        329,1,0,0,0,331,67,1,0,0,0,33,80,93,104,112,114,122,130,138,146,
+        153,157,164,168,178,188,194,199,210,224,235,240,247,252,256,259,
+        266,288,295,299,309,322,326,330
+    ]
 
 class TypstGrammarParser ( Parser ):
 
@@ -274,7 +243,7 @@ class TypstGrammarParser ( Parser ):
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
-        self.checkVersion("4.7.2")
+        self.checkVersion("4.13.2")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
@@ -282,6 +251,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class MathContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -333,6 +303,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class RelationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -409,6 +380,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class ExprContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -450,6 +422,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class AdditiveContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -526,6 +499,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class MpContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -602,6 +576,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class UnaryContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -643,14 +618,14 @@ class TypstGrammarParser ( Parser ):
             self.state = 114
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [TypstGrammarParser.ADDITIVE_OP]:
+            if token in [25]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 107
                 self.match(TypstGrammarParser.ADDITIVE_OP)
                 self.state = 108
                 self.unary()
                 pass
-            elif token in [TypstGrammarParser.L_PAREN, TypstGrammarParser.L_BRACE, TypstGrammarParser.L_BRACKET, TypstGrammarParser.BAR, TypstGrammarParser.QUOTE, TypstGrammarParser.ACCENT_OP, TypstGrammarParser.REDUCE_OP, TypstGrammarParser.FUNC, TypstGrammarParser.FUNC_MAT, TypstGrammarParser.FUNC_LIM, TypstGrammarParser.FUNC_LOG, TypstGrammarParser.FUNC_INTEGRAL, TypstGrammarParser.SYMBOL_BASE, TypstGrammarParser.NUMBER]:
+            elif token in [9, 11, 13, 15, 17, 28, 29, 30, 31, 32, 33, 34, 37, 38]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 110 
                 self._errHandler.sync(self)
@@ -680,6 +655,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class SubargsContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -727,11 +703,11 @@ class TypstGrammarParser ( Parser ):
             self.state = 122
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [TypstGrammarParser.QUOTE, TypstGrammarParser.ACCENT_OP, TypstGrammarParser.SYMBOL_BASE, TypstGrammarParser.NUMBER]:
+            if token in [17, 28, 37, 38]:
                 self.state = 117
                 self.atom()
                 pass
-            elif token in [TypstGrammarParser.L_PAREN]:
+            elif token in [9]:
                 self.state = 118
                 self.match(TypstGrammarParser.L_PAREN)
                 self.state = 119
@@ -752,6 +728,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class SubexprContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -799,11 +776,11 @@ class TypstGrammarParser ( Parser ):
             self.state = 130
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [TypstGrammarParser.QUOTE, TypstGrammarParser.ACCENT_OP, TypstGrammarParser.SYMBOL_BASE, TypstGrammarParser.NUMBER]:
+            if token in [17, 28, 37, 38]:
                 self.state = 125
                 self.atom()
                 pass
-            elif token in [TypstGrammarParser.L_PAREN]:
+            elif token in [9]:
                 self.state = 126
                 self.match(TypstGrammarParser.L_PAREN)
                 self.state = 127
@@ -824,6 +801,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class SupexprContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -896,6 +874,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class SubsupexprContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -931,14 +910,14 @@ class TypstGrammarParser ( Parser ):
             self.state = 146
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [TypstGrammarParser.UNDERSCORE]:
+            if token in [18]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 140
                 self.subexpr()
                 self.state = 141
                 self.supexpr()
                 pass
-            elif token in [TypstGrammarParser.CARET]:
+            elif token in [19]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 143
                 self.supexpr()
@@ -958,6 +937,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class SubassignContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1009,11 +989,11 @@ class TypstGrammarParser ( Parser ):
             self.state = 157
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [TypstGrammarParser.QUOTE, TypstGrammarParser.ACCENT_OP, TypstGrammarParser.SYMBOL_BASE, TypstGrammarParser.NUMBER]:
+            if token in [17, 28, 37, 38]:
                 self.state = 149
                 self.atom()
                 pass
-            elif token in [TypstGrammarParser.L_PAREN]:
+            elif token in [9]:
                 self.state = 150
                 self.match(TypstGrammarParser.L_PAREN)
                 self.state = 153
@@ -1046,6 +1026,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class SupassignContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1134,6 +1115,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class SubsupassignContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1212,6 +1194,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class Eval_atContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1258,6 +1241,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class TransposeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1287,7 +1271,7 @@ class TypstGrammarParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 183
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << TypstGrammarParser.T__0) | (1 << TypstGrammarParser.T__1) | (1 << TypstGrammarParser.T__2) | (1 << TypstGrammarParser.T__3))) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 30) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -1302,6 +1286,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class Postfix_opContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1340,17 +1325,17 @@ class TypstGrammarParser ( Parser ):
             self.state = 188
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [TypstGrammarParser.POSTFIX_OP]:
+            if token in [27]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 185
                 self.match(TypstGrammarParser.POSTFIX_OP)
                 pass
-            elif token in [TypstGrammarParser.T__0, TypstGrammarParser.T__1, TypstGrammarParser.T__2, TypstGrammarParser.T__3]:
+            elif token in [1, 2, 3, 4]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 186
                 self.transpose()
                 pass
-            elif token in [TypstGrammarParser.EVAL_BAR]:
+            elif token in [16]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 187
                 self.eval_at()
@@ -1368,6 +1353,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class PostfixContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1427,6 +1413,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class ExpContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1480,6 +1467,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class CompContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1543,47 +1531,47 @@ class TypstGrammarParser ( Parser ):
             self.state = 210
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [TypstGrammarParser.L_PAREN, TypstGrammarParser.L_BRACE, TypstGrammarParser.L_BRACKET]:
+            if token in [9, 11, 13]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 201
                 self.group()
                 pass
-            elif token in [TypstGrammarParser.BAR]:
+            elif token in [15]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 202
                 self.abs_group()
                 pass
-            elif token in [TypstGrammarParser.FUNC]:
+            elif token in [30]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 203
                 self.func()
                 pass
-            elif token in [TypstGrammarParser.FUNC_MAT]:
+            elif token in [31]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 204
                 self.matrix()
                 pass
-            elif token in [TypstGrammarParser.REDUCE_OP]:
+            elif token in [29]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 205
                 self.reduceit()
                 pass
-            elif token in [TypstGrammarParser.FUNC_LIM]:
+            elif token in [32]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 206
                 self.lim()
                 pass
-            elif token in [TypstGrammarParser.FUNC_LOG]:
+            elif token in [33]:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 207
                 self.log()
                 pass
-            elif token in [TypstGrammarParser.FUNC_INTEGRAL]:
+            elif token in [34]:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 208
                 self.integral()
                 pass
-            elif token in [TypstGrammarParser.QUOTE, TypstGrammarParser.ACCENT_OP, TypstGrammarParser.SYMBOL_BASE, TypstGrammarParser.NUMBER]:
+            elif token in [17, 28, 37, 38]:
                 self.enterOuterAlt(localctx, 9)
                 self.state = 209
                 self.atom()
@@ -1601,6 +1589,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class GroupContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1650,7 +1639,7 @@ class TypstGrammarParser ( Parser ):
             self.state = 224
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [TypstGrammarParser.L_PAREN]:
+            if token in [9]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 212
                 self.match(TypstGrammarParser.L_PAREN)
@@ -1659,7 +1648,7 @@ class TypstGrammarParser ( Parser ):
                 self.state = 214
                 self.match(TypstGrammarParser.R_PAREN)
                 pass
-            elif token in [TypstGrammarParser.L_BRACE]:
+            elif token in [11]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 216
                 self.match(TypstGrammarParser.L_BRACE)
@@ -1668,7 +1657,7 @@ class TypstGrammarParser ( Parser ):
                 self.state = 218
                 self.match(TypstGrammarParser.R_BRACE)
                 pass
-            elif token in [TypstGrammarParser.L_BRACKET]:
+            elif token in [13]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 220
                 self.match(TypstGrammarParser.L_BRACKET)
@@ -1690,6 +1679,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class Abs_groupContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1741,6 +1731,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class ArgsContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1798,7 +1789,7 @@ class TypstGrammarParser ( Parser ):
             self.state = 240
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==TypstGrammarParser.COMMA:
+            if _la==21:
                 self.state = 239
                 self.match(TypstGrammarParser.COMMA)
 
@@ -1813,6 +1804,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class Mat_argsContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1870,7 +1862,7 @@ class TypstGrammarParser ( Parser ):
             self.state = 252
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==TypstGrammarParser.SEMICOLON:
+            if _la==20:
                 self.state = 251
                 self.match(TypstGrammarParser.SEMICOLON)
 
@@ -1885,6 +1877,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class FuncContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1941,7 +1934,7 @@ class TypstGrammarParser ( Parser ):
             self.state = 256
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==TypstGrammarParser.UNDERSCORE:
+            if _la==18:
                 self.state = 255
                 self.subargs()
 
@@ -1949,7 +1942,7 @@ class TypstGrammarParser ( Parser ):
             self.state = 259
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==TypstGrammarParser.CARET:
+            if _la==19:
                 self.state = 258
                 self.supexpr()
 
@@ -1982,6 +1975,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class MatrixContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2038,6 +2032,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class ReduceitContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2090,6 +2085,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class LimContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2168,6 +2164,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class LogContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2220,7 +2217,7 @@ class TypstGrammarParser ( Parser ):
             self.state = 288
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==TypstGrammarParser.UNDERSCORE:
+            if _la==18:
                 self.state = 287
                 self.subexpr()
 
@@ -2253,6 +2250,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class IntegralContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2302,7 +2300,7 @@ class TypstGrammarParser ( Parser ):
             self.state = 299
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==TypstGrammarParser.UNDERSCORE or _la==TypstGrammarParser.CARET:
+            if _la==18 or _la==19:
                 self.state = 298
                 self.subsupexpr()
 
@@ -2323,6 +2321,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class TextContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2379,6 +2378,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class AccentContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2435,6 +2435,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class Symbol_baseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2473,17 +2474,17 @@ class TypstGrammarParser ( Parser ):
             self.state = 322
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [TypstGrammarParser.SYMBOL_BASE]:
+            if token in [37]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 319
                 self.match(TypstGrammarParser.SYMBOL_BASE)
                 pass
-            elif token in [TypstGrammarParser.QUOTE]:
+            elif token in [17]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 320
                 self.text()
                 pass
-            elif token in [TypstGrammarParser.ACCENT_OP]:
+            elif token in [28]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 321
                 self.accent()
@@ -2501,6 +2502,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class SymbolContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2554,6 +2556,7 @@ class TypstGrammarParser ( Parser ):
 
 
     class AtomContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2588,12 +2591,12 @@ class TypstGrammarParser ( Parser ):
             self.state = 330
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [TypstGrammarParser.NUMBER]:
+            if token in [38]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 328
                 self.match(TypstGrammarParser.NUMBER)
                 pass
-            elif token in [TypstGrammarParser.QUOTE, TypstGrammarParser.ACCENT_OP, TypstGrammarParser.SYMBOL_BASE]:
+            elif token in [17, 28, 37]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 329
                 self.symbol()
