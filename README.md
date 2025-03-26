@@ -374,7 +374,7 @@ It is welcome to create an issue or pull request.
 
 - [augustt198 / latex2sympy](https://github.com/augustt198/latex2sympy)
 - [purdue-tlt / latex2sympy](https://github.com/purdue-tlt/latex2sympy)
-- [OrangeX4 / vscode-typst-sympy-calculator](https://github.com/OrangeX4/vscode-typst-sympy-calculator)
+- [OrangeX4 / typst-sympy-calculator](https://github.com/OrangeX4/typst-sympy-calculator)
 - [ANTLR](https://www.antlr.org/)
 - [Sympy](https://www.sympy.org/en/index.html)
 
